@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Rear Camera"
+rootProject.name = "USB Camera Viewer"
 include ':app'
