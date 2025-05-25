@@ -1,0 +1,1 @@
+Simple Android app to view a video stream from a connected USB camera.
