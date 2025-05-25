@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(flags, flags);
 
         setContentView(R.layout.activity_main);
-        mSurfaceView = (SurfaceView)findViewById(R.id.camera_surface_view);
+        mSurfaceView = findViewById(R.id.camera_surface_view);
 
         mUsbMonitor = new USBMonitor(this, mUsbMonitorOnDeviceConnectListener);
     }
