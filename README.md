@@ -1,39 +1,22 @@
-# Android USB Camera Viewer
+# CameraMonitorPro
 
-Simple Android app to display video feed from a connected USB camera. There are no controls or configuration - the app automatically detects the camera and displays the video using the highest resolution possible. The view area uses the most of the device's display, and might distort the original image.
+A professional-grade "On-Camera" monitoring solution for filmmakers and camera operators, turning any Android tablet or phone into a high-end production monitor.
 
-The app is expected to work with any USB device that presents itself as a UVC camera, whether a webcam, a capture device, or any sort of a converter. The original use case is an in-car display for rear camera.
+## Advanced Video Tools
+* **Focus Peaking:** Real-time edge detection with adjustable sensitivity and color selection (Red, Green, Blue).
+* **Zebra Stripes:** Exposure aid with configurable thresholds (70% or 95%) to identify overexposed areas.
+* **False Color:** Comprehensive luminance map to precisely judge exposure across the entire frame.
+* **3D LUT Support:** Hardware-accelerated S-Log3 to Rec.709 conversion using OpenGL shaders.
+* **Anamorphic Desqueeze:** Support for 1.33x and 1.55x anamorphic lenses.
+* **Signal Analysis:** Real-time RGB Parade and Luma Histogram for professional signal monitoring.
 
-## Permissions
+## Audio & Interface
+* **Audio Monitoring:** Real-time monitoring of USB microphone/camera audio through headphones with safety headset detection.
+* **Mirror & Grid:** Toggleable horizontal mirroring and Rule of Thirds grid overlays.
+* **Gallery & Snapshots:** Capture high-quality frames directly to the device gallery.
 
-This app requires two permissions:
-- Camera permission is required to access USB cameras. The app does not take pictures nor record video.
-- Record audio permission is required to automatically launch the app when USB camera is connected. The app does not record any audio. (Without this permission, when USB camera is connected, Android will display the "launch with" prompt, but the "Always" option for USB Camera Viewer will be unavailable)
-
-## Installation
-
-Download and install the **.apk** files from releases page.
-
-Also available on [yaky.dev](https://yaky.dev/apps/usb_camera_viewer).
-
-## Building
-
-This app was built using Android Studio Meerkat 2024.3.1, using OpenJDK 21.0.5.
-
-## Contributing
-
-You are welcome to open issues and PRs for any issues that you find.
-
-I would like to keep this application as simple as possible.
+## Technical Implementation
+This application processes all video tools directly on the GPU using custom GLSL shaders, ensuring high frame rates and low CPU overhead even with all analysis tools active.
 
 ## License
-
-Licensed under [Apache License 2.0](LICENSE)
-
-## Acknowledgments
-
-This app uses an updated [uvccamera library](https://uvccamera.org/), hosted on Maven, built by Alexey Pelykh, and licensed under [Apache License 2.0](https://github.com/alexey-pelykh/UVCCamera/blob/main/LICENSE.md). 
-
-The updated library is based on the [original UVCCamera library](https://github.com/saki4510t/UVCCamera) by saki, licensed under [Apache License 2.0](https://github.com/saki4510t/UVCCamera/blob/master/README.md)
-
-App icon is a [Camera icon](https://commons.wikimedia.org/wiki/File:Camera_rounded.svg) from Wikimedia Commons, created by Eduardo López and licensed under [CC-BY-SA-3.0 license](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
+Based on [android-usb-cam-viewer](https://gitlab.com/yaky/android-usb-cam-viewer) by yaky. Licensed under the [Apache License 2.0](LICENSE).
